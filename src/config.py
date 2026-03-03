@@ -1,6 +1,4 @@
-"""Configuration module for the Medical RAG system.
-
-"""
+"""Configuration module for the Medical RAG system."""
 
 import os
 from pathlib import Path
