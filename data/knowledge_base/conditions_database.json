@@ -1,0 +1,193 @@
+{
+  "conditions": {
+    "iron_deficiency_anemia": {
+      "name": "Iron Deficiency Anemia",
+      "severity": "moderate",
+      "category": "hematology",
+      "description": "Most common form of anemia caused by insufficient iron for hemoglobin production",
+      "key_markers": ["hemoglobin", "mean_corpuscular_volume", "red_blood_cells"],
+      "symptoms": ["fatigue", "weakness", "pale skin", "shortness of breath", "cold hands and feet", "brittle nails", "headache"],
+      "risk_factors": ["poor diet", "blood loss", "pregnancy", "female sex", "vegetarian diet"],
+      "specialist": "hematologist",
+      "urgency": "soon",
+      "follow_up_questions": [
+        "Do you feel unusually tired or fatigued?",
+        "Have you noticed any unusual paleness in your skin?",
+        "Do you experience shortness of breath with minimal activity?",
+        "Have you had any recent blood loss or heavy menstrual periods?",
+        "Are you following a vegetarian or vegan diet?",
+        "Do you have difficulty concentrating or brain fog?"
+      ],
+      "differentials": ["thalassemia", "chronic_disease_anemia", "vitamin_b12_deficiency"],
+      "recommended_tests": ["serum_ferritin", "serum_iron", "tibc", "reticulocyte_count"]
+    },
+    "diabetes_mellitus_type_2": {
+      "name": "Type 2 Diabetes Mellitus",
+      "severity": "serious",
+      "category": "endocrinology",
+      "description": "Metabolic disorder characterized by chronic high blood glucose due to insulin resistance",
+      "key_markers": ["glucose_fasting", "hba1c"],
+      "symptoms": ["increased thirst", "frequent urination", "fatigue", "blurred vision", "slow wound healing", "frequent infections", "tingling in hands/feet"],
+      "risk_factors": ["obesity", "sedentary lifestyle", "family history", "age over 45", "high blood pressure", "high cholesterol"],
+      "specialist": "endocrinologist",
+      "urgency": "soon",
+      "follow_up_questions": [
+        "Do you experience excessive thirst or dry mouth?",
+        "Are you urinating more frequently than usual?",
+        "Have you had unexplained weight loss recently?",
+        "Do you have blurred vision or eye problems?",
+        "Do you feel tingling or numbness in your hands or feet?",
+        "Do you have a family history of diabetes?"
+      ],
+      "differentials": ["prediabetes", "diabetes_mellitus_type_1", "gestational_diabetes"],
+      "recommended_tests": ["oral_glucose_tolerance_test", "c_peptide", "insulin_level", "kidney_function_tests"]
+    },
+    "chronic_kidney_disease": {
+      "name": "Chronic Kidney Disease",
+      "severity": "serious",
+      "category": "nephrology",
+      "description": "Progressive loss of kidney function over months to years",
+      "key_markers": ["creatinine", "blood_urea_nitrogen", "urine_protein"],
+      "symptoms": ["fatigue", "swelling in legs", "shortness of breath", "nausea", "decreased urine output", "confusion", "muscle cramps"],
+      "risk_factors": ["diabetes", "hypertension", "age over 60", "family history", "cardiovascular disease", "obesity"],
+      "specialist": "nephrologist",
+      "urgency": "soon",
+      "follow_up_questions": [
+        "Do you have swelling in your legs, ankles, or feet?",
+        "Have you noticed changes in your urine output?",
+        "Do you have a history of diabetes or high blood pressure?",
+        "Are you experiencing muscle cramps or weakness?",
+        "Do you feel nauseated or have loss of appetite?",
+        "Have you had any previous kidney problems or kidney stones?"
+      ],
+      "differentials": ["acute_kidney_injury", "nephrotic_syndrome", "glomerulonephritis"],
+      "recommended_tests": ["gfr_calculation", "kidney_ultrasound", "urine_albumin_creatinine_ratio", "electrolytes"]
+    },
+    "hypothyroidism": {
+      "name": "Hypothyroidism",
+      "severity": "moderate",
+      "category": "endocrinology",
+      "description": "Underactive thyroid gland producing insufficient thyroid hormone",
+      "key_markers": ["tsh", "free_t4"],
+      "symptoms": ["fatigue", "weight gain", "cold intolerance", "constipation", "dry skin", "hair loss", "depression", "slow heart rate", "muscle weakness"],
+      "risk_factors": ["female sex", "age over 60", "autoimmune disease", "thyroid surgery", "radiation therapy", "family history"],
+      "specialist": "endocrinologist",
+      "urgency": "routine",
+      "follow_up_questions": [
+        "Do you feel unusually tired or low on energy?",
+        "Have you gained weight without changes in diet?",
+        "Do you feel cold when others are comfortable?",
+        "Have you noticed increased hair loss or dry skin?",
+        "Do you experience constipation or slow digestion?",
+        "Has your mood been low or depressed recently?"
+      ],
+      "differentials": ["subclinical_hypothyroidism", "euthyroid_sick_syndrome", "hashimoto_thyroiditis"],
+      "recommended_tests": ["thyroid_antibodies", "thyroid_ultrasound", "free_t3"]
+    },
+    "inflammatory_bowel_disease": {
+      "name": "Inflammatory Bowel Disease",
+      "severity": "serious",
+      "category": "gastroenterology",
+      "description": "Chronic inflammation of the digestive tract including Crohn's disease and ulcerative colitis",
+      "key_markers": ["fecal_calprotectin", "fecal_occult_blood", "stool_white_blood_cells"],
+      "symptoms": ["persistent diarrhea", "abdominal pain", "rectal bleeding", "weight loss", "fatigue", "fever", "reduced appetite"],
+      "risk_factors": ["family history", "caucasian ethnicity", "smoking", "NSAIDs use", "age 15-35 or over 60"],
+      "specialist": "gastroenterologist",
+      "urgency": "soon",
+      "follow_up_questions": [
+        "Do you have persistent diarrhea or loose stools?",
+        "Do you experience abdominal pain or cramping?",
+        "Have you noticed blood in your stool?",
+        "Have you had unexplained weight loss?",
+        "Do you have a family history of Crohn's disease or ulcerative colitis?",
+        "Are you experiencing fatigue along with digestive symptoms?"
+      ],
+      "differentials": ["irritable_bowel_syndrome", "celiac_disease", "infectious_colitis"],
+      "recommended_tests": ["colonoscopy", "ct_enterography", "stool_culture", "crp_esr"]
+    },
+    "urinary_tract_infection": {
+      "name": "Urinary Tract Infection",
+      "severity": "mild",
+      "category": "urology",
+      "description": "Bacterial infection of the urinary system including bladder, kidneys, or urethra",
+      "key_markers": ["leukocyte_esterase", "urine_nitrites", "urine_blood"],
+      "symptoms": ["burning urination", "frequent urination", "cloudy urine", "pelvic pain", "strong urine odor", "fever if kidney involved"],
+      "risk_factors": ["female sex", "sexual activity", "menopause", "urinary catheter", "urinary tract abnormalities", "diabetes"],
+      "specialist": "urologist",
+      "urgency": "urgent",
+      "follow_up_questions": [
+        "Are you experiencing pain or burning when urinating?",
+        "How frequently are you urinating?",
+        "Have you noticed cloudy or foul-smelling urine?",
+        "Do you have lower abdominal or pelvic pain?",
+        "Do you have fever or chills?",
+        "Have you had UTIs before?"
+      ],
+      "differentials": ["kidney_infection", "sexually_transmitted_infection", "interstitial_cystitis"],
+      "recommended_tests": ["urine_culture", "sensitivity_testing", "kidney_function_tests"]
+    },
+    "hepatitis": {
+      "name": "Hepatitis",
+      "severity": "serious",
+      "category": "hepatology",
+      "description": "Inflammation of the liver caused by viral infection, alcohol, or autoimmune conditions",
+      "key_markers": ["alt", "ast"],
+      "symptoms": ["fatigue", "jaundice", "abdominal pain", "nausea", "loss of appetite", "dark urine", "pale stools", "joint pain"],
+      "risk_factors": ["blood transfusion", "IV drug use", "unprotected sex", "alcohol abuse", "travel to endemic areas", "tattoos"],
+      "specialist": "hepatologist",
+      "urgency": "urgent",
+      "follow_up_questions": [
+        "Have you noticed yellowing of your skin or eyes?",
+        "Is your urine dark or your stool pale?",
+        "Have you had any recent exposure to blood products or IV drug use?",
+        "Do you consume alcohol regularly?",
+        "Have you traveled to areas with high hepatitis prevalence?",
+        "Are you experiencing nausea or loss of appetite?"
+      ],
+      "differentials": ["fatty_liver_disease", "alcoholic_hepatitis", "autoimmune_hepatitis"],
+      "recommended_tests": ["hepatitis_panel", "liver_biopsy", "abdominal_ultrasound", "liver_function_tests"]
+    },
+    "colorectal_cancer": {
+      "name": "Colorectal Cancer",
+      "severity": "critical",
+      "category": "oncology",
+      "description": "Cancer of the colon or rectum, often preceded by polyps",
+      "key_markers": ["fecal_occult_blood", "fecal_calprotectin"],
+      "symptoms": ["rectal bleeding", "change in bowel habits", "abdominal pain", "unexplained weight loss", "fatigue", "iron deficiency anemia"],
+      "risk_factors": ["age over 50", "family history", "inflammatory bowel disease", "high fat diet", "obesity", "smoking", "alcohol"],
+      "specialist": "oncologist",
+      "urgency": "urgent",
+      "follow_up_questions": [
+        "Have you noticed blood in your stool?",
+        "Have there been recent changes in your bowel habits?",
+        "Have you had unexplained weight loss?",
+        "Do you have persistent abdominal pain or cramping?",
+        "Do you have a family history of colon cancer or polyps?",
+        "Are you over 50 years of age?"
+      ],
+      "differentials": ["inflammatory_bowel_disease", "diverticulitis", "hemorrhoids"],
+      "recommended_tests": ["colonoscopy", "ct_scan", "cea_tumor_marker", "biopsy"]
+    },
+    "leukemia": {
+      "name": "Leukemia",
+      "severity": "critical",
+      "category": "hematology",
+      "description": "Cancer of the blood or bone marrow characterized by abnormal white blood cell production",
+      "key_markers": ["white_blood_cells", "hemoglobin", "platelets"],
+      "symptoms": ["fatigue", "frequent infections", "easy bruising", "bleeding", "bone pain", "swollen lymph nodes", "fever", "night sweats"],
+      "risk_factors": ["radiation exposure", "chemical exposure", "certain genetic disorders", "family history", "smoking", "previous chemotherapy"],
+      "specialist": "hematologist_oncologist",
+      "urgency": "urgent",
+      "follow_up_questions": [
+        "Do you experience frequent infections or slow healing?",
+        "Have you noticed unusual bruising or bleeding?",
+        "Do you have swollen lymph nodes in your neck, armpits, or groin?",
+        "Are you experiencing bone or joint pain?",
+        "Do you have night sweats or unexplained fevers?",
+        "Have you had significant unexplained weight loss?"
+      ],
+      "differentials": ["lymphoma", "myeloma", "myelodysplastic_syndrome"],
+      "recommended_tests": ["bone_marrow_biopsy", "flow_cytometry", "chromosome_analysis", "peripheral_blood_smear"]
+    }
+  }
+}

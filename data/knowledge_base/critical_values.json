@@ -1,0 +1,49 @@
+{
+  "critical_values": {
+    "hemoglobin": {
+      "low": 7.0,
+      "high": 20.0,
+      "action_low": "URGENT: Critically low hemoglobin. Risk of severe anemia and organ failure.",
+      "action_high": "URGENT: Critically high hemoglobin. Risk of thrombosis."
+    },
+    "white_blood_cells": {
+      "low": 2000,
+      "high": 30000,
+      "action_low": "URGENT: Critically low WBC. Severe risk of infection.",
+      "action_high": "EMERGENCY: Critically high WBC. Possible leukemia or severe infection."
+    },
+    "platelets": {
+      "low": 50000,
+      "high": 1000000,
+      "action_low": "URGENT: Critically low platelets. Risk of serious bleeding.",
+      "action_high": "URGENT: Critically high platelets. Risk of thrombosis."
+    },
+    "glucose_fasting": {
+      "low": 40,
+      "high": 500,
+      "action_low": "EMERGENCY: Critically low blood glucose. Risk of hypoglycemic coma.",
+      "action_high": "EMERGENCY: Critically high blood glucose. Risk of diabetic ketoacidosis."
+    },
+    "creatinine": {
+      "low": null,
+      "high": 10.0,
+      "action_high": "URGENT: Critically high creatinine. Possible kidney failure requiring dialysis."
+    },
+    "potassium": {
+      "low": 2.5,
+      "high": 6.5,
+      "action_low": "URGENT: Critically low potassium. Risk of cardiac arrhythmia.",
+      "action_high": "EMERGENCY: Critically high potassium. Risk of cardiac arrest."
+    },
+    "alt": {
+      "low": null,
+      "high": 1000,
+      "action_high": "URGENT: Critically elevated ALT. Possible acute liver failure."
+    },
+    "triglycerides": {
+      "low": null,
+      "high": 500,
+      "action_high": "URGENT: Critically high triglycerides. Risk of pancreatitis."
+    }
+  }
+}

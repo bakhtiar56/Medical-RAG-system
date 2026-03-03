@@ -1,0 +1,35 @@
+# Environment variables
+.env
+
+# Vector database
+chroma_db/
+
+# Cache
+api_enrichment_cache.json
+
+# Python
+*.pyc
+__pycache__/
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+
+# IDEs
+.idea/
+.vscode/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# OS
+.DS_Store
+
+# Logs
+*.log
+
+# Sample reports (PDFs only, keep directory)
+/data/sample_reports/*.pdf
