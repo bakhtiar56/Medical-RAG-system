@@ -2,7 +2,7 @@
 
 from typing import Optional
 
-from src.config import LLM_MODEL, OPENAI_API_KEY
+from src.config import LLM_MODEL, OPENAI_API_KEY, OPENAI_BASE_URL
 from src.abnormality_detector import DetectionReport
 from src.elimination_engine import EliminationState
 
@@ -62,6 +62,7 @@ class DiagnosticReasoner:
                 model=LLM_MODEL,
                 temperature=0.1,
                 openai_api_key=OPENAI_API_KEY,
+                base_url=OPENAI_BASE_URL,
             )
         return self._llm
 
