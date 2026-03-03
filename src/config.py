@@ -1,4 +1,6 @@
-"""Configuration module for the Medical RAG system."""
+"""Configuration module for the Medical RAG system.
+
+"""
 
 import os
 from pathlib import Path
@@ -13,8 +15,11 @@ SAMPLE_REPORTS_DIR = DATA_DIR / "sample_reports"
 CHROMA_PERSIST_DIR = BASE_DIR / "chroma_db"
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
-LLM_MODEL = "gpt-4o"
-EMBEDDING_MODEL = "text-embedding-3-small"
+OPENAI_BASE_URL = os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1")
+LLM_MODEL = os.getenv("LLM_MODEL", "gpt-4o")
+EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-small")
+
+USE_OPENROUTER = "openrouter.ai" in OPENAI_BASE_URL
 
 CHUNK_SIZE = 1000
 CHUNK_OVERLAP = 200
