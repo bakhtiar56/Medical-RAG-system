@@ -9,9 +9,9 @@ setup(
     package_dir={"": "src"},
     python_requires=">=3.11",
     install_requires=[
-        "langchain==0.2.16",
-        "langchain-community==0.2.16",
-        "langchain-openai==0.1.23",
+        "langchain==0.3.27",
+        "langchain-community==0.3.27",
+        "langchain-openai==0.3.27",
         "openai==1.44.0",
         "chromadb==0.5.5",
         "pypdf==4.3.1",
