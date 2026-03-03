@@ -120,15 +120,20 @@ class TestAnswerProcessing:
 
     def test_repeated_no_eliminates_condition(self, engine, diabetes_abnormalities):
         engine.seed_candidates(diabetes_abnormalities)
-        # Answer No to all questions for a condition
+        initial_confidences = {c.condition_id: c.confidence for c in engine.state.candidates}
+        # Answer No to all available questions
         for _ in range(10):
             questions = engine.get_next_questions(1)
             if not questions:
                 break
             engine.process_answer(questions[0].question_id, "No")
-        eliminated = [c for c in engine.state.candidates if c.eliminated]
-        # At least one should be eliminated after many No answers
-        assert len(eliminated) >= 0  # May or may not eliminate based on question count
+        # After repeated No answers, at least one condition's confidence should have dropped
+        final_confidences = {c.condition_id: c.confidence for c in engine.state.candidates}
+        confidence_dropped = any(
+            final_confidences[cid] < initial_confidences[cid]
+            for cid in initial_confidences
+        )
+        assert confidence_dropped
 
 
 class TestForceConclusion:
