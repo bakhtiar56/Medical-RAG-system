@@ -2,7 +2,7 @@
 
 from typing import Optional
 
-from src.config import CHROMA_PERSIST_DIR, EMBEDDING_MODEL, OPENAI_API_KEY, TOP_K_RESULTS
+from src.config import CHROMA_PERSIST_DIR, EMBEDDING_MODEL, OPENAI_API_KEY, TOP_K_RESULTS, USE_OPENROUTER
 from src.knowledge_builder import MedicalKnowledgeBase
 
 
@@ -25,11 +25,20 @@ class MedicalVectorStore:
 
     def _get_embeddings(self):
         if self._embeddings is None:
-            from langchain_openai import OpenAIEmbeddings
-            self._embeddings = OpenAIEmbeddings(
-                model=EMBEDDING_MODEL,
-                openai_api_key=OPENAI_API_KEY,
-            )
+            if USE_OPENROUTER:
+                from langchain_community.embeddings import HuggingFaceEmbeddings
+                print("Using local HuggingFace embeddings (free, no API needed)")
+                self._embeddings = HuggingFaceEmbeddings(
+                    model_name="all-MiniLM-L6-v2",
+                    model_kwargs={"device": "cpu"},
+                    encode_kwargs={"normalize_embeddings": True},
+                )
+            else:
+                from langchain_openai import OpenAIEmbeddings
+                self._embeddings = OpenAIEmbeddings(
+                    model=EMBEDDING_MODEL,
+                    openai_api_key=OPENAI_API_KEY,
+                )
         return self._embeddings
 
     def build_index(self, force_rebuild: bool = False) -> None:
