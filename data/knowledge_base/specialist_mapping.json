@@ -1,0 +1,86 @@
+{
+  "specialists": {
+    "hematologist": {
+      "title": "Hematologist",
+      "description": "Specialist in blood disorders and diseases of the blood-forming organs",
+      "conditions": ["iron_deficiency_anemia", "leukemia", "anemia"],
+      "urgency_keywords": ["anemia", "blood", "leukemia"]
+    },
+    "hematologist_oncologist": {
+      "title": "Hematologist-Oncologist",
+      "description": "Specialist in blood cancers and related malignancies",
+      "conditions": ["leukemia", "lymphoma"],
+      "urgency_keywords": ["cancer", "malignancy", "leukemia"]
+    },
+    "endocrinologist": {
+      "title": "Endocrinologist",
+      "description": "Specialist in hormonal disorders including diabetes and thyroid conditions",
+      "conditions": ["diabetes_mellitus_type_2", "hypothyroidism", "hyperthyroidism"],
+      "urgency_keywords": ["diabetes", "thyroid", "hormone"]
+    },
+    "nephrologist": {
+      "title": "Nephrologist",
+      "description": "Specialist in kidney diseases and disorders",
+      "conditions": ["chronic_kidney_disease", "nephrotic_syndrome"],
+      "urgency_keywords": ["kidney", "renal", "creatinine"]
+    },
+    "gastroenterologist": {
+      "title": "Gastroenterologist",
+      "description": "Specialist in digestive system disorders",
+      "conditions": ["inflammatory_bowel_disease", "colorectal_cancer"],
+      "urgency_keywords": ["bowel", "digestive", "colon"]
+    },
+    "hepatologist": {
+      "title": "Hepatologist",
+      "description": "Specialist in liver diseases",
+      "conditions": ["hepatitis", "fatty_liver_disease", "cirrhosis"],
+      "urgency_keywords": ["liver", "hepatitis", "jaundice"]
+    },
+    "oncologist": {
+      "title": "Oncologist",
+      "description": "Specialist in cancer diagnosis and treatment",
+      "conditions": ["colorectal_cancer", "leukemia"],
+      "urgency_keywords": ["cancer", "tumor", "malignancy"]
+    },
+    "urologist": {
+      "title": "Urologist",
+      "description": "Specialist in urinary tract and male reproductive system disorders",
+      "conditions": ["urinary_tract_infection", "kidney_stones"],
+      "urgency_keywords": ["urinary", "bladder", "kidney_stones"]
+    },
+    "cardiologist": {
+      "title": "Cardiologist",
+      "description": "Specialist in heart and cardiovascular diseases",
+      "conditions": ["cardiovascular_disease", "hypertension"],
+      "urgency_keywords": ["heart", "cardiovascular", "cholesterol"]
+    },
+    "general_practitioner": {
+      "title": "General Practitioner",
+      "description": "Primary care physician for general health concerns",
+      "conditions": [],
+      "urgency_keywords": []
+    }
+  },
+  "urgency_levels": {
+    "urgent": {
+      "description": "See a doctor within 24-48 hours",
+      "color": "red",
+      "action": "Contact your doctor immediately or go to urgent care"
+    },
+    "soon": {
+      "description": "See a doctor within 1-2 weeks",
+      "color": "orange",
+      "action": "Schedule an appointment with a specialist promptly"
+    },
+    "routine": {
+      "description": "See a doctor within 1-4 weeks",
+      "color": "yellow",
+      "action": "Schedule a routine appointment with a specialist"
+    },
+    "monitor": {
+      "description": "Follow up in 3-6 months",
+      "color": "green",
+      "action": "Continue monitoring with regular check-ups"
+    }
+  }
+}

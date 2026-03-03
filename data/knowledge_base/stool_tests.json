@@ -1,0 +1,59 @@
+{
+  "stool_tests": {
+    "fecal_occult_blood": {
+      "type": "qualitative",
+      "normal_value": "negative",
+      "abnormal_conditions": ["colorectal_cancer", "inflammatory_bowel_disease", "gastrointestinal_bleeding", "peptic_ulcer"],
+      "description": "Hidden blood in stool"
+    },
+    "stool_ph": {
+      "unit": "",
+      "normal_ranges": {
+        "adult": {"min": 6.0, "max": 7.5}
+      },
+      "low_conditions": ["malabsorption", "carbohydrate_malabsorption"],
+      "high_conditions": ["colitis", "antibiotic_use"],
+      "description": "Acidity of stool"
+    },
+    "fecal_fat": {
+      "unit": "g/24h",
+      "normal_ranges": {
+        "adult": {"min": 0, "max": 7}
+      },
+      "critical_low": null,
+      "critical_high": 20,
+      "low_conditions": [],
+      "high_conditions": ["malabsorption", "pancreatitis", "celiac_disease", "crohn_disease"],
+      "description": "Fat content in stool"
+    },
+    "fecal_calprotectin": {
+      "unit": "μg/g",
+      "normal_ranges": {
+        "adult": {"min": 0, "max": 50}
+      },
+      "critical_low": null,
+      "critical_high": 200,
+      "low_conditions": [],
+      "high_conditions": ["inflammatory_bowel_disease", "colorectal_cancer", "infectious_colitis"],
+      "description": "Marker of intestinal inflammation"
+    },
+    "stool_white_blood_cells": {
+      "type": "qualitative",
+      "normal_value": "negative",
+      "abnormal_conditions": ["inflammatory_bowel_disease", "infectious_colitis", "bacterial_gastroenteritis"],
+      "description": "White blood cells in stool"
+    },
+    "stool_culture": {
+      "type": "qualitative",
+      "normal_value": "no_pathogens",
+      "abnormal_conditions": ["bacterial_gastroenteritis", "salmonella", "campylobacter", "shigella"],
+      "description": "Bacterial culture of stool"
+    },
+    "ova_and_parasites": {
+      "type": "qualitative",
+      "normal_value": "negative",
+      "abnormal_conditions": ["parasitic_infection", "giardia", "cryptosporidium", "entamoeba_histolytica"],
+      "description": "Parasites in stool"
+    }
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "blood_tests": {
+    "hemoglobin": {
+      "unit": "g/dL",
+      "normal_ranges": {
+        "adult_male": {"min": 13.5, "max": 17.5},
+        "adult_female": {"min": 12.0, "max": 16.0},
+        "child": {"min": 11.0, "max": 16.0}
+      },
+      "critical_low": 7.0,
+      "critical_high": 20.0,
+      "low_conditions": ["iron_deficiency_anemia", "chronic_kidney_disease", "leukemia"],
+      "high_conditions": ["dehydration", "polycythemia"],
+      "description": "Protein in red blood cells that carries oxygen"
+    },
+    "white_blood_cells": {
+      "unit": "cells/μL",
+      "normal_ranges": {
+        "adult": {"min": 4500, "max": 11000},
+        "child": {"min": 5000, "max": 15000}
+      },
+      "critical_low": 2000,
+      "critical_high": 30000,
+      "low_conditions": ["leukemia", "bone_marrow_suppression", "viral_infection"],
+      "high_conditions": ["infection", "leukemia", "inflammation"],
+      "description": "Immune system cells"
+    },
+    "platelets": {
+      "unit": "cells/μL",
+      "normal_ranges": {
+        "adult": {"min": 150000, "max": 400000}
+      },
+      "critical_low": 50000,
+      "critical_high": 1000000,
+      "low_conditions": ["leukemia", "immune_thrombocytopenia"],
+      "high_conditions": ["inflammation", "iron_deficiency_anemia"],
+      "description": "Cells involved in blood clotting"
+    },
+    "red_blood_cells": {
+      "unit": "million cells/μL",
+      "normal_ranges": {
+        "adult_male": {"min": 4.5, "max": 5.9},
+        "adult_female": {"min": 4.0, "max": 5.2},
+        "child": {"min": 3.8, "max": 5.5}
+      },
+      "critical_low": 2.0,
+      "critical_high": 8.0,
+      "low_conditions": ["anemia", "iron_deficiency_anemia", "chronic_kidney_disease"],
+      "high_conditions": ["dehydration", "polycythemia"],
+      "description": "Oxygen-carrying cells"
+    },
+    "mean_corpuscular_volume": {
+      "unit": "fL",
+      "normal_ranges": {
+        "adult": {"min": 80, "max": 100}
+      },
+      "critical_low": 60,
+      "critical_high": 130,
+      "low_conditions": ["iron_deficiency_anemia", "thalassemia"],
+      "high_conditions": ["vitamin_b12_deficiency", "folate_deficiency", "hypothyroidism"],
+      "description": "Average size of red blood cells"
+    },
+    "glucose_fasting": {
+      "unit": "mg/dL",
+      "normal_ranges": {
+        "adult": {"min": 70, "max": 100},
+        "child": {"min": 60, "max": 100}
+      },
+      "critical_low": 40,
+      "critical_high": 500,
+      "low_conditions": ["hypoglycemia", "insulinoma"],
+      "high_conditions": ["diabetes_mellitus_type_2", "prediabetes", "stress_response"],
+      "description": "Blood sugar level after fasting"
+    },
+    "creatinine": {
+      "unit": "mg/dL",
+      "normal_ranges": {
+        "adult_male": {"min": 0.7, "max": 1.3},
+        "adult_female": {"min": 0.5, "max": 1.1},
+        "child": {"min": 0.3, "max": 0.7}
+      },
+      "critical_low": 0.1,
+      "critical_high": 10.0,
+      "low_conditions": ["muscle_wasting", "low_protein_diet"],
+      "high_conditions": ["chronic_kidney_disease", "acute_kidney_injury", "dehydration"],
+      "description": "Waste product filtered by kidneys"
+    },
+    "blood_urea_nitrogen": {
+      "unit": "mg/dL",
+      "normal_ranges": {
+        "adult": {"min": 7, "max": 25}
+      },
+      "critical_low": 2,
+      "critical_high": 100,
+      "low_conditions": ["liver_failure", "malnutrition"],
+      "high_conditions": ["chronic_kidney_disease", "dehydration", "high_protein_diet"],
+      "description": "Nitrogen in the blood from protein breakdown"
+    },
+    "alt": {
+      "unit": "U/L",
+      "normal_ranges": {
+        "adult_male": {"min": 7, "max": 56},
+        "adult_female": {"min": 7, "max": 45},
+        "child": {"min": 7, "max": 45}
+      },
+      "critical_low": 0,
+      "critical_high": 1000,
+      "low_conditions": [],
+      "high_conditions": ["hepatitis", "fatty_liver", "liver_damage"],
+      "description": "Liver enzyme - Alanine Aminotransferase"
+    },
+    "ast": {
+      "unit": "U/L",
+      "normal_ranges": {
+        "adult": {"min": 10, "max": 40}
+      },
+      "critical_low": 0,
+      "critical_high": 1000,
+      "low_conditions": [],
+      "high_conditions": ["hepatitis", "liver_damage", "heart_attack", "muscle_damage"],
+      "description": "Liver/heart enzyme - Aspartate Aminotransferase"
+    },
+    "hba1c": {
+      "unit": "%",
+      "normal_ranges": {
+        "adult": {"min": 4.0, "max": 5.6}
+      },
+      "critical_low": 2.0,
+      "critical_high": 15.0,
+      "low_conditions": ["hypoglycemia"],
+      "high_conditions": ["diabetes_mellitus_type_2", "prediabetes"],
+      "description": "3-month average blood sugar level"
+    },
+    "total_cholesterol": {
+      "unit": "mg/dL",
+      "normal_ranges": {
+        "adult": {"min": 0, "max": 200}
+      },
+      "critical_low": 50,
+      "critical_high": 500,
+      "low_conditions": ["malnutrition", "hyperthyroidism"],
+      "high_conditions": ["cardiovascular_disease_risk", "hypothyroidism"],
+      "description": "Total blood cholesterol"
+    },
+    "ldl_cholesterol": {
+      "unit": "mg/dL",
+      "normal_ranges": {
+        "adult": {"min": 0, "max": 100}
+      },
+      "critical_low": 20,
+      "critical_high": 300,
+      "low_conditions": [],
+      "high_conditions": ["cardiovascular_disease_risk", "familial_hypercholesterolemia"],
+      "description": "Bad cholesterol"
+    },
+    "triglycerides": {
+      "unit": "mg/dL",
+      "normal_ranges": {
+        "adult": {"min": 0, "max": 150}
+      },
+      "critical_low": 20,
+      "critical_high": 500,
+      "low_conditions": [],
+      "high_conditions": ["cardiovascular_disease_risk", "diabetes_mellitus_type_2", "metabolic_syndrome"],
+      "description": "Blood fat levels"
+    },
+    "tsh": {
+      "unit": "mIU/L",
+      "normal_ranges": {
+        "adult": {"min": 0.4, "max": 4.0}
+      },
+      "critical_low": 0.01,
+      "critical_high": 10.0,
+      "low_conditions": ["hyperthyroidism", "pituitary_dysfunction"],
+      "high_conditions": ["hypothyroidism", "autoimmune_thyroiditis"],
+      "description": "Thyroid stimulating hormone"
+    },
+    "free_t4": {
+      "unit": "ng/dL",
+      "normal_ranges": {
+        "adult": {"min": 0.8, "max": 1.8}
+      },
+      "critical_low": 0.3,
+      "critical_high": 5.0,
+      "low_conditions": ["hypothyroidism", "pituitary_dysfunction"],
+      "high_conditions": ["hyperthyroidism", "thyrotoxicosis"],
+      "description": "Free thyroxine hormone"
+    }
+  }
+}

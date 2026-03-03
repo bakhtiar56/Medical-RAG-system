@@ -1,0 +1,63 @@
+{
+  "urine_tests": {
+    "urine_protein": {
+      "unit": "mg/dL",
+      "normal_ranges": {
+        "adult": {"min": 0, "max": 14}
+      },
+      "critical_low": null,
+      "critical_high": 300,
+      "low_conditions": [],
+      "high_conditions": ["chronic_kidney_disease", "nephrotic_syndrome", "urinary_tract_infection"],
+      "description": "Protein in urine"
+    },
+    "urine_glucose": {
+      "type": "qualitative",
+      "normal_value": "negative",
+      "abnormal_conditions": ["diabetes_mellitus_type_2", "renal_glycosuria"],
+      "description": "Glucose in urine"
+    },
+    "urine_blood": {
+      "type": "qualitative",
+      "normal_value": "negative",
+      "abnormal_conditions": ["urinary_tract_infection", "kidney_stones", "glomerulonephritis", "bladder_cancer"],
+      "description": "Blood in urine"
+    },
+    "urine_ph": {
+      "unit": "",
+      "normal_ranges": {
+        "adult": {"min": 4.5, "max": 8.0}
+      },
+      "low_conditions": ["acidosis", "high_protein_diet"],
+      "high_conditions": ["urinary_tract_infection", "alkalosis"],
+      "description": "Acidity/alkalinity of urine"
+    },
+    "urine_specific_gravity": {
+      "unit": "",
+      "normal_ranges": {
+        "adult": {"min": 1.005, "max": 1.030}
+      },
+      "low_conditions": ["diabetes_insipidus", "overhydration"],
+      "high_conditions": ["dehydration", "proteinuria"],
+      "description": "Concentration of urine"
+    },
+    "urine_ketones": {
+      "type": "qualitative",
+      "normal_value": "negative",
+      "abnormal_conditions": ["diabetic_ketoacidosis", "starvation", "low_carb_diet"],
+      "description": "Ketone bodies in urine"
+    },
+    "leukocyte_esterase": {
+      "type": "qualitative",
+      "normal_value": "negative",
+      "abnormal_conditions": ["urinary_tract_infection", "kidney_infection", "bladder_infection"],
+      "description": "Marker for white blood cells in urine"
+    },
+    "urine_nitrites": {
+      "type": "qualitative",
+      "normal_value": "negative",
+      "abnormal_conditions": ["urinary_tract_infection", "gram_negative_bacteriuria"],
+      "description": "Bacterial metabolite in urine"
+    }
+  }
+}
