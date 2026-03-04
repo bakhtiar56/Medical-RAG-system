@@ -543,7 +543,7 @@ def results_stage():
                     answer = pipeline.ask_followup(user_q)
                     st.markdown(f"**Answer:** {answer}")
                 except Exception:
-                    st.warning("Follow-up questions require an OpenAI API key.")
+                    st.warning("Follow-up questions require a valid API key. Check your OPENAI_API_KEY and OPENAI_BASE_URL in .env.")
 
     st.markdown("---")
     report_text = pipeline.get_session_summary()
