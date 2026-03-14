@@ -42,7 +42,7 @@ An AI-powered Medical RAG (Retrieval-Augmented Generation) system that analyzes 
 
 ### Prerequisites
 - Python 3.11+
-- OpenAI API key
+- OpenAI API key (or compatible provider such as OpenRouter)
 
 ### Installation
 
@@ -65,6 +65,53 @@ streamlit run app/streamlit_app.py
 ```bash
 python scripts/demo.py
 python scripts/demo.py --interactive  # Q&A mode
+```
+
+## 🐳 Docker
+
+The Docker image runs in **API-required mode only** — it will exit immediately with a clear error if `OPENAI_API_KEY` is not provided.
+
+### Required environment variables
+
+| Variable | Required | Default | Description |
+|---|---|---|---|
+| `OPENAI_API_KEY` | ✅ Yes | — | Your OpenAI (or OpenRouter) API key |
+| `OPENAI_BASE_URL` | No | `https://api.openai.com/v1` | Override for OpenRouter or other compatible APIs |
+| `LLM_MODEL` | No | `gpt-4o` | Model used for diagnosis generation |
+| `EMBEDDING_MODEL` | No | `text-embedding-3-small` | Model used for embeddings |
+
+### Build
+
+```bash
+docker build -t medical-rag-system .
+# or
+make docker-build
+```
+
+### Run
+
+```bash
+# Recommended: pass credentials via .env file
+docker run -p 8501:8501 --env-file .env medical-rag-system
+
+# Or pass the key directly
+docker run -p 8501:8501 -e OPENAI_API_KEY=sk-... medical-rag-system
+```
+
+Open [http://localhost:8501](http://localhost:8501) in your browser.
+
+If `OPENAI_API_KEY` is missing or empty the container exits immediately:
+
+```
+ERROR: OPENAI_API_KEY is not set.
+Please provide it via --env-file .env or -e OPENAI_API_KEY=<your-key>.
+```
+
+### Docker Compose
+
+```bash
+make docker-run    # docker-compose up -d
+make docker-stop   # docker-compose down
 ```
 
 ## 🧪 Supported Tests
@@ -92,12 +139,13 @@ medical-rag-system/
 ## 🛠️ Development
 
 ```bash
-make install      # Install dependencies
-make test         # Run tests
-make test-cov     # Run tests with coverage
-make run          # Start Streamlit app
-make demo         # Run CLI demo
-make enrich       # Enrich knowledge base from APIs
+make install        # Install runtime dependencies
+make install-dev    # Install runtime + dev/test dependencies (pytest, pytest-cov)
+make test           # Run tests (requires install-dev)
+make test-cov       # Run tests with coverage
+make run            # Start Streamlit app
+make demo           # Run CLI demo
+make enrich         # Enrich knowledge base from APIs
 ```
 
 ## 🌐 API Integrations

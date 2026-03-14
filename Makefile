@@ -1,7 +1,10 @@
-.PHONY: install test test-cov lint format run demo demo-interactive enrich docker-build docker-run docker-stop clean
+.PHONY: install install-dev test test-cov lint format run demo demo-interactive enrich docker-build docker-run docker-stop clean
 
 install:
 	pip install -r requirements.txt
+
+install-dev:
+	pip install -r requirements.txt -r requirements-dev.txt
 
 test:
 	pytest tests/ -v
