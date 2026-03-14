@@ -1,5 +1,7 @@
 """Streamlit web application for Medical RAG System."""
 
+import os
+
 import streamlit as st
 
 from src.rag_pipeline import MedicalRAGPipeline, PatientInfo
@@ -10,6 +12,16 @@ st.set_page_config(
     page_icon="🏥",
     layout="wide",
 )
+
+# Fail fast if the required API key is missing (works for both Docker and local runs).
+if not os.getenv("OPENAI_API_KEY"):
+    st.error(
+        "**OPENAI_API_KEY is not set.**\n\n"
+        "Please add it to your `.env` file and restart:\n"
+        "```\nOPENAI_API_KEY=sk-...\n```\n"
+        "If you are running with Docker, use `--env-file .env`."
+    )
+    st.stop()
 
 CUSTOM_CSS = """
 <style>

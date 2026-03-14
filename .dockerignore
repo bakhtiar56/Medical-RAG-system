@@ -1,0 +1,42 @@
+# Docker build context exclusions — keeps image small and safe
+
+# Version control
+.git
+.gitignore
+
+# Python caches
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+htmlcov/
+.coverage
+
+# Environment / secrets — never bake into image
+.env
+
+# Local virtual environments
+.venv/
+venv/
+env/
+
+# ChromaDB persistent data — mount at runtime instead
+chroma_db/
+
+# IDE / OS artefacts
+.idea/
+.vscode/
+.DS_Store
+*.log
+
+# Build artefacts
+dist/
+build/
+*.egg-info/
+
+# API enrichment cache (regenerated at runtime)
+api_enrichment_cache.json
+
+# Sample PDF reports (large binary files)
+data/sample_reports/*.pdf
